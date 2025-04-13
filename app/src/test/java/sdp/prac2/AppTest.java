@@ -7,4 +7,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    public void testTask6_RoundUpNonMultiples() {
+        // Arrange
+        List<Integer> input = Arrays.asList(45, 123, 250);
+        
+        // Act
+        List<Integer> result = SimpleFunctions.Task6(input);
+        
+        // Assert
+        assertEquals(Arrays.asList(100, 200, 300), result);
+    }
+
+    public void testTask6_AlreadyMultiples() {
+        // Arrange
+        List<Integer> input = Arrays.asList(100, 200, 300);
+        
+        // Act
+        List<Integer> result = SimpleFunctions.Task6(input);
+        
+        // Assert
+        assertEquals(input, result); 
+    }
 }
